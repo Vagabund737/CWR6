@@ -674,3 +674,209 @@
         @include text-style(36px, 600, 100%, var(--color02));
     }
 }
+
+.footer {
+    width: $main-width;
+    margin: auto;
+}
+
+.mailing-content {
+    width: 100%;
+    margin-bottom: 16px;
+
+    &-header {
+        width: 100%;
+        background-color: #FFC7F3;
+        border-radius: 10px;
+        padding: 48px 0;
+        @include flex-properties(column, center, center, 35px);
+
+        &-text {
+            text-align: center;
+            @include text-style(70px, 600, 102%, #000000);
+        }
+    }
+
+    &-form {
+        width: 100%;
+        padding: 24px;
+        background-color: #000000;
+        border-radius: 10px;
+        @include flex-properties(row, center, center, 24px);
+
+        & > input {
+            width: 60%;
+            height: 140px;
+            padding: 0 32px;
+            background-color: #272727;
+            border: 0;
+            border-radius: 10px;
+            outline: none;
+            @include text-style(36px, 600, 100%, #BEBEBE);
+        }
+
+        & > button {
+            width: 38.236%;
+            height: 140px;
+            background-color: #EA2E34;
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            @include text-style(36px, 600, 100%, #ffffff);
+        }
+    }
+}
+
+.info-content {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+            "rc-11 rc-12 rc-12 rc-12"
+            "rc-21 rc-21 rc-23 rc-24";
+    grid-template-columns: 3.11fr 3.08fr 1fr 2fr;
+    gap: 16px;
+
+    &-tagline {
+        grid-area: rc-11;
+        padding: 24px;
+        background-color: #000000; 
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        @include flex-properties(column, flex-start, center, 138px);
+
+        & > img {
+            width: 60%;
+        }
+
+        & > p {
+            padding-right: 20px;
+            @include text-style(36px, 800, 110%, #ffffff);
+        }
+    }
+
+    &-anytext {
+        grid-area: rc-12;
+        padding: 16px;
+        background-color: #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        & > h1 {
+            @include text-style(36px, 800, 110%, #ffffff);
+        }
+
+        & > button {
+            width: 320px;
+            height: 48px;
+            background-color: #FFCB45;
+            border: 0;
+            border-radius: 10px;
+            justify-self: end;
+            cursor: pointer;
+            @include text-style(18px, 800, 110%, #000000);
+        }
+
+        & > h2 {
+            align-self: flex-end;
+            @include text-style(36px, 600, 110%, #ffffff);
+        }
+
+        & > h2:last-of-type {
+            justify-self: end;
+        }
+    }
+
+    &-feedback {
+        grid-area: rc-21;
+        padding: 16px;
+        background-color: #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        @include flex-properties(column, flex-start, center, 121px);
+
+        & > h3 {
+            width: 45%;
+            @include text-style(36px, 800, 110%, #ffffff);
+
+            & > br:first-of-type {
+                display: none;
+            }
+        }
+
+        & > a {
+            width: 320px;
+            height: 48px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            text-decoration: none;
+            align-self: flex-end;
+            @include text-style(18px, 800, 110%, #000000);
+            @include flex-properties(row, center, center, 0);
+        }
+    }
+
+    &-agreement {
+        grid-area: rc-23;
+        background-color: #000000;
+        box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        text-align: center;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        @include text-style(28px, 600, 100%, #ffffff);
+        @include flex-properties(row, center, center, 0);
+    }
+
+    &-soc {
+        grid-area: rc-24;
+        background-color: #ffffff;
+        border-radius: 10px;
+        position: relative;
+
+        & > img {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        & > img:nth-of-type(1) {
+            top: 25px;
+            left: 45px;
+        }
+
+        & > img:nth-of-type(2) {
+            top: 60px;
+            right: 42px;
+        }
+
+        & > img:nth-of-type(3) {
+            top: 140px;
+            left: 65px;
+        }
+
+        & > img:nth-of-type(4) {
+            right: 63px;
+            bottom: 123px;
+        }
+
+        & > img:nth-of-type(5) {
+            left: 92px;
+            bottom: 23px;
+        }
+    }
+}
+
+.big-footer-logo {
+    margin-top: 60px;
+
+    & > img:first-of-type {
+        filter: invert(1);
+        mix-blend-mode: var(--filter);
+    }
+
+    & > img:last-of-type {
+        display: none;
+    }
+}
