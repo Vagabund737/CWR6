@@ -14,3 +14,11 @@ $grm1: #BEBEBE;
 $global-width: 1440px;
 $side-indent: 32px;
 $main-width: $global-width - $side-indent;
+
+$global-width-tablet: 768px;
+$side-indent-tablet: 32px;
+$main-width-tablet: $global-width-tablet - $side-indent-tablet;
+
+$global-width-mobile: 375px;
+$side-indent-mobile: 16px;
+$main-width-mobile: $global-width-mobile - $side-indent-mobile;
